@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+
+    <div id="display"></div>
+    <template id="login">
     <div class = "container c1">
         <div class = "enterType" id = "login">
             <h2>log in</h2>
@@ -16,9 +19,11 @@
             <input type="text" name="password" id="password" maxlength="20" minlength="2" required onchange="handleLogChange()"><br><br>
             <button class="submit" onclick="onLogSubmit()">submit</button>
             <button class="submit" onclick="logOut()" id="RegisterSubmit">log out</button>
+            <button data-target="game" onclick="switchPage(this)"></button>
+            <button data-target="register" onclick="switchPage(this)">register</button>
         </div>
-
- <!-- <template>  -->
+    </template>
+ <template id="register"> 
     <div class = "enterType" id = "signup">
         <h2>sign up</h2>
         <label for="username">username</label><br>
@@ -27,20 +32,23 @@
         <label for="password">password</label><br>
         <input type="text" name="password" id="register-password" maxlength="20" minlength="2" required onchange="handleRegisterChange()"><br><br>
         <button class="submit" onclick="onRegisterSubmit()" id="RegisterSubmit">submit</button>
+        <button data-target="login" onclick="switchPage(this)"></button>
     </div>
-<!-- </template>  -->
+</template> 
 
 
 <button data-target="game" onclick="switchPage(this)"></button>
-<div id="display"></div>
+
 <template id="game">
     <h1>counter</h1>
     <div>
         <div id="display"></div>
         <button  onclick="counter()">add</button>
+        <button data-target="login" onclick="switchPage(this)">logout</button>
 </div>
 </template>
 <script src="game.js"></script>
 <script src="change-page.js"></script>
+<script src="log-sign.js"></script>
 </body>
 </html>
