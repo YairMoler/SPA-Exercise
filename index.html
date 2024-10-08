@@ -6,16 +6,41 @@
     <title>Document</title>
 </head>
 <body>
-    <button data-target="game" onclick="switchPage(this)"></button>
-    <div id="display"></div>
-    <template id="game">
-        <h1>counter</h1>
-        <div>
-            <div id="display"></div>
-            <button  onclick="counter()">add</button>
+    <div class = "container c1">
+        <div class = "enterType" id = "login">
+            <h2>log in</h2>
+            <label for="username">username</label><br>
+            <input type="text" name="username" id="username" maxlength="20" minlength="2" required onchange="handleLogChange()"><br><br>
+
+            <label for="password">password</label><br>
+            <input type="text" name="password" id="password" maxlength="20" minlength="2" required onchange="handleLogChange()"><br><br>
+            <button class="submit" onclick="onLogSubmit()">submit</button>
+            <button class="submit" onclick="logOut()" id="RegisterSubmit">log out</button>
+        </div>
+
+ <!-- <template>  -->
+    <div class = "enterType" id = "signup">
+        <h2>sign up</h2>
+        <label for="username">username</label><br>
+        <input type="text" name="username" id="register-username" maxlength="20" minlength="2" required onchange="handleRegisterChange()"><br><br>
+
+        <label for="password">password</label><br>
+        <input type="text" name="password" id="register-password" maxlength="20" minlength="2" required onchange="handleRegisterChange()"><br><br>
+        <button class="submit" onclick="onRegisterSubmit()" id="RegisterSubmit">submit</button>
     </div>
-    </template>
-    <script src="game.js"></script>
-    <script src="change-page.js"></script>
+<!-- </template>  -->
+
+
+<button data-target="game" onclick="switchPage(this)"></button>
+<div id="display"></div>
+<template id="game">
+    <h1>counter</h1>
+    <div>
+        <div id="display"></div>
+        <button  onclick="counter()">add</button>
+</div>
+</template>
+<script src="game.js"></script>
+<script src="change-page.js"></script>
 </body>
 </html>
