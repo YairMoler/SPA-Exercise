@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button data-target="game" onclick="switchPage(this)"></button>
+    <div id="display"></div>
+    <template id="game">
+        <h1>counter</h1>
+        <div>
+            <div id="display"></div>
+            <button  onclick="counter()">add</button>
+    </div>
+    </template>
+    <script src="game.js"></script>
+    <script src="change-page.js"></script>
+</body>
+</html>
