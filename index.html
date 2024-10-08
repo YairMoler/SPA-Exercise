@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <template>
+    
         <div class = "container c1">
             <div class = "enterType" id = "login">
                 <h2>log in</h2>
@@ -16,9 +16,10 @@
                 <label for="password">password</label><br>
                 <input type="text" name="password" id="password" maxlength="20" minlength="2" required onchange="handleLogChange()"><br><br>
                 <button class="submit" onclick="onLogSubmit()">submit</button>
+                <button class="submit" onclick="logOut()" id="RegisterSubmit">log out</button>
             </div>
-    </template>
-    <template>
+    
+     <!-- <template>  -->
         <div class = "enterType" id = "signup">
             <h2>sign up</h2>
             <label for="username">username</label><br>
@@ -28,6 +29,7 @@
             <input type="text" name="password" id="register-password" maxlength="20" minlength="2" required onchange="handleRegisterChange()"><br><br>
             <button class="submit" onclick="onRegisterSubmit()" id="RegisterSubmit">submit</button>
         </div>
-    </template>
+    <!-- </template>  -->
+    <script src = "log-sign.js"></script>
 </body>
 </html>
