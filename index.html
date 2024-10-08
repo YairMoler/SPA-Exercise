@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <template>
+        <div class = "container c1">
+            <div class = "enterType" id = "login">
+                <h2>log in</h2>
+                <label for="username">username</label><br>
+                <input type="text" name="username" id="username" maxlength="20" minlength="2" required onchange="handleLogChange()"><br><br>
+    
+                <label for="password">password</label><br>
+                <input type="text" name="password" id="password" maxlength="20" minlength="2" required onchange="handleLogChange()"><br><br>
+                <button class="submit" onclick="onLogSubmit()">submit</button>
+            </div>
+    </template>
+    <template>
+        <div class = "enterType" id = "signup">
+            <h2>sign up</h2>
+            <label for="username">username</label><br>
+            <input type="text" name="username" id="register-username" maxlength="20" minlength="2" required onchange="handleRegisterChange()"><br><br>
+
+            <label for="password">password</label><br>
+            <input type="text" name="password" id="register-password" maxlength="20" minlength="2" required onchange="handleRegisterChange()"><br><br>
+            <button class="submit" onclick="onRegisterSubmit()" id="RegisterSubmit">submit</button>
+        </div>
+    </template>
+</body>
+</html>
